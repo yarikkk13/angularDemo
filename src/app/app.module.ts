@@ -1,21 +1,26 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from "./components/app/app.component";
-import { PostComponent } from './components/post/post.component';
+import {PostComponent} from './components/post/post.component';
 import {HttpClientModule} from "@angular/common/http";
-import {RouterModule} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
+
+const routes: Routes = [
+  {path: 'posts', component: PostComponent}
+];
 
 @NgModule({
   declarations: [
-  AppComponent,
-  PostComponent
+    AppComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot()
+    RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
