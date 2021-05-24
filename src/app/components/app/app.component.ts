@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
   styles: [``]
 })
 export class AppComponent {
-  users : User[] | undefined
+  users : User[] | undefined;
 
   constructor(private httpClient: HttpClient) {
     this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users')
