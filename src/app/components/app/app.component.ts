@@ -12,6 +12,6 @@ export class AppComponent {
 
   constructor(private httpClient: HttpClient) {
     this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users')
-      .subscribe(value => this.users=value )
+      .subscribe(value => this.users=value );
   }
 }
