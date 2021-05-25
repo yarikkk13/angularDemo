@@ -13,6 +13,4 @@ export class PostComponent {
   constructor(private postService: PostService) {
     postService.getAllPosts().subscribe(value => this.posts = value)
   }
-
-
 }
